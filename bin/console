@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'AndroidPlease'
+
+if ARGV.length != 1
+  puts 'INVALID AMOUNT OF PARAMS'
+  exit 1
+end
+
+param = ARGV[0]
+
+AndroidPlease::SearchModel::initialize(param)
+
