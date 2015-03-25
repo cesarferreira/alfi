@@ -3,12 +3,12 @@
 require 'bundler/setup'
 require 'AndroidPlease'
 
-if ARGV.length != 1
-  puts 'INVALID AMOUNT OF PARAMS'
-  exit 1
-end
+# if ARGV.length != 1
+#   puts 'INVALID AMOUNT OF PARAMS'
+#   exit 1
+# end
+#
+# param = ARGV[0]
 
-param = ARGV[0]
-
-AndroidPlease::SearchModel::initialize(param)
+AndroidPlease::SearchModel::initialize(ARGV[0])
 
