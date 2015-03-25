@@ -1,7 +1,8 @@
 # alf ![Header](https://travis-ci.org/cesarferreira/alf.svg?branch=master)
 
-![logo](https://raw.github.com/cesarferreira/alf/master/extras/images/logo.png)
-
+<p align="center">
+<img src="https://raw.github.com/cesarferreira/alf/master/extras/images/wide-logo.jpg" width="80%" />
+</p>
 
 Search through thousands of android libraries that can help you scale your projects elegantly 
 
@@ -16,12 +17,16 @@ Install it yourself via terminal:
 ```bash
 alf picasso
 ```
-
-![Screenshot01](https://raw.github.com/cesarferreira/alf/master/extras/images/screenshot01.png)
+<p align="center">
+<img src="https://raw.github.com/cesarferreira/alf/master/extras/images/screenshot01.png" />
+</p>
 
 Then add it to your `build.gradle`
 
-![Screenshot01](https://raw.github.com/cesarferreira/alf/master/extras/images/gradle02.png)
+<p align="center">
+<img src="https://raw.github.com/cesarferreira/alf/master/extras/images/gradle02.png" />
+</p>
+
 
 Sync it and you're good to go!
 
