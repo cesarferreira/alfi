@@ -78,7 +78,7 @@ module AndroidPlease
         if param.size>=3
           num_results, result_list, suggestions = fetch_results(param)
 
-          puts "Found: #{num_results} results for '#{param}'"
+          puts "Found: #{num_results} result#{num_results>1?'s':''} for '#{param}'"
 
           result_list.each do |result|
             puts result.green
