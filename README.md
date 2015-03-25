@@ -1,6 +1,6 @@
-# Androidplease
+# AndroidPlease
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Androidplease`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/AndroidPlease`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
 
@@ -9,7 +9,7 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'Androidplease'
+gem 'AndroidPlease'
 ```
 
 And then execute:
@@ -18,11 +18,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install Androidplease
+    $ gem install AndroidPlease
 
 ## Usage
 
 TODO: Write usage instructions here
+
+![Header](https://raw.github.com/cesarferreira/AndroidPlease/master/extras/images/screenshot01.png)
+
 
 ## Development
 
@@ -32,7 +35,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/Androidplease/fork )
+1. Fork it ( https://github.com/cesarferreira/AndroidPlease/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
