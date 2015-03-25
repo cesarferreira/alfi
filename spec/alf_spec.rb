@@ -1,6 +1,4 @@
 require 'spec_helper'
-require 'vcr'
-require 'minitest/autorun'
 
 describe Alf do
 

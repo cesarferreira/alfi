@@ -1,4 +1,4 @@
-# alf https://travis-ci.org/cesarferreira/alf.svg
+# alf ![Header](https://travis-ci.org/cesarferreira/alf.svg?branch=master)
 
 TODO: Delete this, and describe the gem
 
