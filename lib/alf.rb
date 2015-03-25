@@ -1,4 +1,4 @@
-require 'Alf/version'
+require 'alf/version'
 require 'rubygems'
 require 'json'
 require 'net/http'
