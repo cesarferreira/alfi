@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'AndroidPlease/version'
+require 'Alf/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'AndroidPlease'
-  spec.version       = AndroidPlease::VERSION
+  spec.name          = 'alf'
+  spec.version       = Alf::VERSION
   spec.authors       = ['cesar ferreira']
   spec.email         = ['cesar.manuel.ferreira@gmail.com']
 
@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '~> 1.8'
   spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'webmock', '~> 1.20'
   spec.add_dependency 'json',  '~> 1.8.2'
   spec.add_dependency 'colorize',  '~> 0.7.5'
 

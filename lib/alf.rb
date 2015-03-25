@@ -1,11 +1,11 @@
-require 'AndroidPlease/version'
+require 'Alf/version'
 require 'rubygems'
 require 'json'
 require 'net/http'
 require 'uri'
 require 'colorize'
 
-module AndroidPlease
+module Alf
 
   class SearchModel
 
@@ -40,7 +40,7 @@ module AndroidPlease
 
         # Iterate the libraries
         result['response']['docs'].each do |doc|
-          output = "compile '#{doc['id']}:#{doc['latestVersion']}'"
+          output = "  compile '#{doc['id']}:#{doc['latestVersion']}'"
           result_list << output
         end
 
@@ -67,22 +67,25 @@ module AndroidPlease
       #com.google.android.gms:play-services:6.5.87
     end
 
-
     def self.initialize (param)
 
-      # puts param?.lenght
-
       if param == nil
-        puts "Missing query parameter\n\tusage: AndroidPlease SEARCH_QUERY\n".red
+        puts "Missing query parameter\n\tusage: alf SEARCH_QUERY\n".red
       else
         if param.size>=3
+
+          puts "Searching..."
+
           num_results, result_list, suggestions = fetch_results(param)
 
-          puts "Found: #{num_results} result#{num_results>1?'s':''} for '#{param}'"
 
+          # Iterate to print results
           result_list.each do |result|
             puts result.green
           end
+
+          puts "Found: #{num_results} result#{num_results>1?'s':''} for '#{param}'"
+
 
           # handle the suggestions
           if suggestions!=nil
