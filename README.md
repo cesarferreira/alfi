@@ -1,7 +1,9 @@
 # alf ![Header](https://travis-ci.org/cesarferreira/alf.svg?branch=master)
 
+**A**ndroid **L**ibrary **F**inder
+
 <p align="center">
-<img src="https://raw.github.com/cesarferreira/alf/master/extras/images/wide-logo.jpg" width="80%" />
+<img src="https://raw.githubusercontent.com/cesarferreira/alf/master/extras/images/wide-logo.png" width="100%" />
 </p>
 
 Search through thousands of android libraries that can help you scale your projects elegantly 
@@ -14,21 +16,19 @@ Install it yourself via terminal:
 
 ## Usage
 
+Search for `something`
+
 ```bash
 alf picasso
 ```
+
+
 <p align="center">
 <img src="https://raw.github.com/cesarferreira/alf/master/extras/images/screenshot01.png" />
 </p>
 
-Then add it to your `build.gradle`
+**Final step:** Copy the library you want to your `build.gradle` and sync it
 
-<p align="center">
-<img src="https://raw.github.com/cesarferreira/alf/master/extras/images/gradle02.png" />
-</p>
-
-
-Sync it and you're good to go!
 
 ## Contributing
 
