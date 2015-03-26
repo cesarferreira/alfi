@@ -27,7 +27,7 @@ alfi picasso
 ```
 
 <p align="center">
-<img src="https://raw.github.com/cesarferreira/alfi/master/extras/images/terminal01.png" />
+<img src="https://raw.github.com/cesarferreira/alfi/master/extras/images/terminal01.gif" />
 </p>
 
 **Final step:** Copy the library you want to your `build.gradle` and sync it
