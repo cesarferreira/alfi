@@ -1,11 +1,11 @@
-require 'alf/version'
+require 'alfi/version'
 require 'rubygems'
 require 'json'
 require 'net/http'
 require 'uri'
 require 'colorize'
 
-module Alf
+module Alfi
 
   class SearchModel
 
@@ -70,7 +70,7 @@ module Alf
     def self.initialize (param)
 
       if param == nil
-        puts "Missing query parameter\n\tusage: alf SEARCH_QUERY\n".red
+        puts "Missing query parameter\n\tusage: alfi SEARCH_QUERY\n".red
       else
         if param.size>=3
 

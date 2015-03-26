@@ -1,4 +1,4 @@
-require 'alf'
+require 'alfi'
 require 'vcr'
 
 VCR.configure do |c|

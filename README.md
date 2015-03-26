@@ -1,30 +1,29 @@
-# alf ![Header](https://travis-ci.org/cesarferreira/alf.svg?branch=master)
+# alfi ![Header](https://travis-ci.org/cesarferreira/alfi.svg?branch=master)
 
-**A**ndroid **L**ibrary **F**inder
+**A**ndroid **L**ibrary **Fi**nder
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/cesarferreira/alf/master/extras/images/wide-logo.png" width="100%" />
+<img src="https://raw.githubusercontent.com/cesarferreira/alfi/master/extras/images/wide-logo.png" width="100%" />
 </p>
 
 Search through thousands of android libraries that can help you scale your projects elegantly 
 
 ## Installation
 
-Install it yourself via terminal:
+Install it via terminal:
 
-    $ gem install alf
+    $ gem install alfi
 
 ## Usage
 
 Search for `something`
 
 ```bash
-alf picasso
+alfi picasso
 ```
 
-
 <p align="center">
-<img src="https://raw.github.com/cesarferreira/alf/master/extras/images/screenshot01.png" />
+<img src="https://raw.github.com/cesarferreira/alfi/master/extras/images/screenshot01.png" />
 </p>
 
 **Final step:** Copy the library you want to your `build.gradle` and sync it
@@ -32,7 +31,7 @@ alf picasso
 
 ## Contributing
 
-1. Fork it ( https://github.com/cesarferreira/alf/fork )
+1. Fork it ( https://github.com/cesarferreira/alfi/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
