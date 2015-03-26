@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.summary       = 'Android Library Finder'
-  spec.description   = 'Search through thousands of android libraries that can help you scale your projects elegantly.'
+  spec.description   = 'Android Library Finder to search through thousands of android libraries that can help you scale your projects elegantly.'
   spec.homepage      = "https://github.com/cesarferreira/alfi"
   spec.license       = 'MIT'
 

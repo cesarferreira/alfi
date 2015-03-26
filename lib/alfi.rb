@@ -38,6 +38,9 @@ module Alfi
         # Init the result list
         result_list = Array.new
 
+        # query google reps
+        result_list = query_offline_reps(query)
+
         # Iterate the libraries
         result['response']['docs'].each do |doc|
           output = "  compile '#{doc['id']}:#{doc['latestVersion']}'"
@@ -50,23 +53,39 @@ module Alfi
       end
     end
 
+    # QUERY OFFLINE REPOSITORIES (google)
     def self.query_offline_reps(query)
-      #
-      #  compile 'com.android.support:appcompat-v7:21.0.3'
-      #  compile 'com.android.support:cardview-v7:21.0.3'
-      #  compile 'com.android.support:gridlayout-v7:21.0.3'
-      #  compile 'com.android.support:leanback-v17:21.0.3'
-      #  compile 'com.android.support:mediarouter-v7:21.0.3'
-      #  compile 'com.android.support:palette-v7:21.0.3'
-      #  compile 'com.android.support:recyclerview-v7:21.0.3'
-      #  compile 'com.android.support:support-annotations:21.0.3'
-      #  compile 'com.android.support:support-v13:21.0.3'
-      #  compile 'com.android.support:support-v4:21.0.3'
 
-      #com.google.android.gms:play-services-wearable:6.5.87
-      #com.google.android.gms:play-services:6.5.87
+      google_libs = Array.new
+      google_libs << 'com.android.support:appcompat-v7'
+      google_libs << 'com.android.support:cardview-v7'
+      google_libs << 'com.android.support:gridlayout-v7'
+      google_libs << 'com.android.support:leanback-v17'
+      google_libs << 'com.android.support:mediarouter-v7'
+      google_libs << 'com.android.support:palette-v7'
+      google_libs << 'com.android.support:recyclerview-v7'
+      google_libs << 'com.android.support:support-annotations'
+      google_libs << 'com.android.support:support-v4'
+      google_libs << 'com.android.support:support-v13'
+      google_libs << 'com.google.android.gms:play-services-wearable'
+      google_libs << 'com.google.android.gms:play-services'
+
+
+      found_libs = Array.new
+
+      # is there anything?
+      google_libs.each do |lib|
+
+        if lib.include?(query)
+          found_libs << "  compile '#{lib}:+'"
+        end
+      end
+
+      return found_libs
+
     end
 
+    # INIT
     def self.initialize (param)
 
       if param == nil
