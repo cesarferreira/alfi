@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'alfi/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'alfii'
+  spec.name          = 'alfi'
   spec.version       = Alfi::VERSION
   spec.authors       = ['cesar ferreira']
   spec.email         = ['cesar.manuel.ferreira@gmail.com']
@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Android Library Finder'
   spec.description   = 'Search through thousands of android libraries that can help you scale your projects elegantly.'
-  spec.homepage      = "https://github.com/cesarferreira/alfii"
+  spec.homepage      = "https://github.com/cesarferreira/alfi"
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
