@@ -1,12 +1,16 @@
-# alfi ![Header](https://travis-ci.org/cesarferreira/alfi.svg?branch=master)
+# alfi
+
+![Header](https://travis-ci.org/cesarferreira/alfi.svg?branch=master) [![Gem Version](http://img.shields.io/gem/v/alfi.svg?style=flat)](http://badge.fury.io/rb/alfi) [![Dependency Status](https://gemnasium.com/cesarferreira/alfi.svg)](https://gemnasium.com/cesarferreira/alfi)
+
 
 **A**ndroid **L**ibrary **Fi**nder
+
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/cesarferreira/alfi/master/extras/images/wide-logo.png" width="100%" />
 </p>
 
-Search through thousands of android libraries that can help you scale your projects elegantly 
+Search through thousands of android libraries that can help you scale your projects elegantly
 
 ## Installation
 
