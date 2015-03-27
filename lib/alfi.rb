@@ -16,11 +16,16 @@ module Alfi
     def self.fetch_results(query)
       uri = URI.parse(query_url(query))
 
-
       http = Net::HTTP.new(uri.host, uri.port)
       request = Net::HTTP::Get.new(uri.request_uri)
 
-      response = http.request(request)
+      begin
+        response = http.request(request)
+      rescue SocketError
+        puts "Internet Connection not available".red
+        exit 1
+      end
+
 
       if response.code == '200'
         result = JSON.parse(response.body)
