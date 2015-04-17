@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://search.maven.org/solrsearch/select?q=active-android&rows=350&wt=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/0.8.55
+      Date:
+      - Fri, 17 Apr 2015 10:47:56 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '414'
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":0,"params":{"spellcheck":"true","fl":"id,g,a,latestVersion,p,ec,repositoryId,text,timestamp,versionCount","sort":"score
+        desc,timestamp desc,g asc,a asc","indent":"off","q":"active-android","qf":"text^20
+        g^5 a^10","spellcheck.count":"5","wt":"json","rows":"350","version":"2.2","defType":"dismax"}},"response":{"numFound":0,"start":0,"docs":[]},"spellcheck":{"suggestions":[]}}'
+    http_version: 
+  recorded_at: Fri, 17 Apr 2015 10:48:05 GMT
+recorded_with: VCR 2.9.3
