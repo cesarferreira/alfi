@@ -37,7 +37,7 @@ module Alfi
 
         # Possible suggestions
         if num_results==0
-          suggestions = result['spellcheck']['suggestions'].last['suggestion']
+          suggestions = (result['spellcheck']['suggestions'].last || {})['suggestion']
         end
 
         # Init the result list
