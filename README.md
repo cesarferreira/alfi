@@ -1,6 +1,4 @@
-# alfi
-
-[![Build Status](https://travis-ci.org/cesarferreira/alfi.svg?branch=master)](https://travis-ci.org/cesarferreira/alfi) [![Gem Version](http://img.shields.io/gem/v/alfi.svg?style=flat)](http://badge.fury.io/rb/alfi) [![Dependency Status](https://gemnasium.com/cesarferreira/alfi.svg)](https://gemnasium.com/cesarferreira/alfi)
+# alfi [![Build Status](https://travis-ci.org/cesarferreira/alfi.svg?branch=master)](https://travis-ci.org/cesarferreira/alfi) [![Gem Version](http://img.shields.io/gem/v/alfi.svg?style=flat)](http://badge.fury.io/rb/alfi) [![Dependency Status](https://gemnasium.com/cesarferreira/alfi.svg)](https://gemnasium.com/cesarferreira/alfi)
 
 
 **A**ndroid **L**ibrary **Fi**nder
