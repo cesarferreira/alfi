@@ -5,11 +5,6 @@
 
 **A**ndroid **L**ibrary **Fi**nder
 
-
-<p align="center">
-<img src="https://raw.githubusercontent.com/cesarferreira/alfi/master/extras/images/logov2.png" width="100%" />
-</p>
-
 Search through thousands of android libraries that can help you scale your projects elegantly
 
 ## Installation
