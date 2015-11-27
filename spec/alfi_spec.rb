@@ -1,35 +1,28 @@
 require 'spec_helper'
 
 describe Alfi do
-
   it 'Test the query_url' do
-    str = Alfi::SearchModel.query_url('picasso')
+    str = Alfi::Providers::Maven.new('picasso').query_url('picasso')
     expect(str).to eq 'http://search.maven.org/solrsearch/select?q=picasso&rows=350&wt=json'
   end
 
-  it 'Request the webservice MOCK' do
-    str = Alfi::SearchModel.query_url("quickutils")
-    expect(str).to eq 'http://search.maven.org/solrsearch/select?q=quickutils&rows=350&wt=json'
-  end
-
   context 'suggestions' do
-
     it 'should return 0 suggestions' do
       VCR.use_cassette('search_active_android_with_no_suggestions') do
-        num_results, results, suggestions = Alfi::SearchModel.fetch_results('active-android')
+        maven_provider = Alfi::Providers::Maven.new('active-android')
 
-        expect(suggestions).to be_nil
+        expect(maven_provider).to_not receive(:add_suggestions)
+        maven_provider.call
       end
     end
 
     it 'should return suggestions' do
       VCR.use_cassette('search_picassoa_with_suggestions') do
-        num_results, results, suggestions = Alfi::SearchModel.fetch_results('picassoa')
+        maven_provider = Alfi::Providers::Maven.new('picassoa')
 
-        expect(suggestions.length).to be > 0
+        expect(maven_provider).to receive(:add_suggestions).with(array_including('picasso', 'piccolo'))
+        maven_provider.call
       end
     end
-
   end
-
 end
