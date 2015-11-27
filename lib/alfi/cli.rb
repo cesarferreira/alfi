@@ -51,7 +51,9 @@ class Alfi::Cli
         exit
       end
 
-      opts.separator  "\nOnce you provide Bintray authentication data it will be saved\n".green unless @bintray_username
+      opts.separator  "\nNow you are using alfi credentials for Bintray".yellow
+      opts.separator  "But you also could enter your authentication data if you want. "\
+                      "It will be saved once you provided it\n".green unless @bintray_username
     end
   end
 
