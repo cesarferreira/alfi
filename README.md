@@ -7,12 +7,6 @@
 
 Search through thousands of android libraries that can help you scale your projects elegantly
 
-## Installation
-
-Install it via terminal:
-
-    $ gem install alfi
-
 ## Usage
 
 Search for `something`
@@ -26,6 +20,12 @@ alfi picasso
 </p>
 
 **Final step:** Copy the library you want to your `build.gradle` and sync it
+
+## Installation
+
+Install it via terminal:
+
+    $ gem install alfi
 
 
 ## Contributing
