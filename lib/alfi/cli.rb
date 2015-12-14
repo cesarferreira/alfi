@@ -1,3 +1,6 @@
+require 'optparse'
+include OptionParser::Arguable
+
 class Alfi::Cli
   BINTRAY_OPTIONS_FILE_NAME = File.expand_path('~/.alfi_bintray.json')
 

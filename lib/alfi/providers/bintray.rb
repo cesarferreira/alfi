@@ -28,7 +28,7 @@ class Alfi::Providers::Bintray < Alfi::Providers::Base
 
   def request_extensions
     unless $bintray_auth
-      puts "  # Bintray using random credentials".yellow
+      puts "  # Bintray: using random credentials".yellow
       $bintray_auth = ALFI_BINTRAY_CREDS.sample
     end
     @http.use_ssl = true
