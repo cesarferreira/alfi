@@ -39,10 +39,10 @@ class Alfi::Cli
       opts.separator  ''
       opts.separator  'Options'
 
-      opts.on('-u BINTRAY_USER_NAME', '--user BINTRAY_USER_NAME', 'your binray user name') do |bintray_username|
+      opts.on('-u BINTRAY_USER_NAME', '--user BINTRAY_USER_NAME', 'your bintray user name') do |bintray_username|
         @bintray_username = bintray_username
       end
-      opts.on('-k BINTRAY_KEY', '--key BINTRAY_KEY', 'your binray api key') do |bintray_key|
+      opts.on('-k BINTRAY_KEY', '--key BINTRAY_KEY', 'your bintray api key') do |bintray_key|
         @bintray_key = bintray_key
       end
       opts.on('-h', '--help', 'Displays help') do
