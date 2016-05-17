@@ -10,6 +10,7 @@ class Alfi::Cli
   end
 
   def call(arguments)
+    @searchType = Array.new
     create_options_parser
     search_param = @all_defined_arguments.include?(arguments.first) ? nil : arguments.shift
     @bintray_username = nil
@@ -20,7 +21,7 @@ class Alfi::Cli
 
     exit_with("Missing query parameter\n".red + @opt_parser.help) unless search_param
 
-    Alfi::Search.new.call(search_param)
+    Alfi::Search.new.call(search_param, @searchType)
   end
 
   def create_options_parser
@@ -29,6 +30,8 @@ class Alfi::Cli
       '--user',
       '-k',
       '--key',
+      '-r',
+      '--repository',
       '-h',
       '--help',
       '-v',
@@ -52,6 +55,24 @@ class Alfi::Cli
       opts.on('-v', '--version', 'Displays version') do
         puts Alfi::VERSION
         exit
+      end
+      opts.on('-r REPOSITORY_NAME', '--repository REPOSITORY_NAME', 'If should search on m (maven), jc (jCenter) or mc (mavenCentral) ') do |repository_name|
+        if repository_name != "m" && repository_name != "jc" && repository_name != "mc"
+          puts "Please choose one of the following m, jc or mc"
+          exit
+        end
+
+        if repository_name == "m"
+          @searchType << "m"
+        end
+
+        if repository_name == "mc"
+          @searchType << "maven"
+        end
+
+        if repository_name == "jc"
+          @searchType << "jcenter"
+        end
       end
 
       opts.separator  "\nNow you are using alfi credentials for Bintray".yellow

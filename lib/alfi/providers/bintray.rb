@@ -36,22 +36,26 @@ class Alfi::Providers::Bintray < Alfi::Providers::Base
   end
 
   def call
-    begin
-      response = @http.request(@request)
-    rescue SocketError
-      puts "Internet Connection not available".red
-      exit 1
-    end
+    if @searchType.empty? || @searchType.include?('jcenter') || @searchType.include?('maven')
+      begin
+        response = @http.request(@request)
+      rescue SocketError
+        puts "Internet Connection not available".red
+        exit 1
+      end
 
-    return if response.code != '200'
-    response_json = JSON.parse(response.body || '{}')
+      return if response.code != '200'
+      response_json = JSON.parse(response.body || '{}')
 
-    add_to_list "  # #{'-'*20}Bintray#{'-'*20}" if response_json.size > 0
+      add_to_list "  # #{'-'*20}Bintray#{'-'*20}" if response_json.size > 0
 
-    response_json.group_by { |package| package['repo'] }.each do |provider, repositories|
-      add_to_list "  # #{PROVIDERS_TEXTS[provider]}"
-      repositories.each do |repo|
-        add_repo_to_list "#{repo['system_ids'][0]}:#{repo['latest_version']}" if repo['system_ids'].size > 0
+      response_json.group_by { |package| package['repo'] }.each do |provider, repositories|
+        if @searchType.empty? || @searchType.include?(provider)
+          add_to_list "  # #{PROVIDERS_TEXTS[provider]}"
+          repositories.each do |repo|
+            add_repo_to_list "#{repo['system_ids'][0]}:#{repo['latest_version']}" if repo['system_ids'].size > 0
+          end
+        end
       end
     end
   end

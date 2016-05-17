@@ -9,11 +9,11 @@ class Alfi::Search
     exit 1
   end
 
-  def call(search_param)
+  def call(search_param, searchType)
     return puts 'The search needs 3+ characters'.red if search_param.size < 3
     puts "Searching...\n"
 
-    Alfi::Providers.all.each { |cc| cc.new(search_param).call }
+    Alfi::Providers.all.each { |cc| cc.new(search_param, searchType).call }
 
     exit_with('No results'.red) if $result_list.empty? && $suggestions.empty?
     num_results = $result_list.count { |r| r.strip[0] != '#' }

@@ -1,6 +1,6 @@
 # require 'alfi/providers/base'
 class Alfi::Providers::Offline < Alfi::Providers::Base
-  def initialize(query)
+  def initialize(query, searchType)
     @query = query
   end
 
