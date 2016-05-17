@@ -36,7 +36,7 @@ class Alfi::Providers::Bintray < Alfi::Providers::Base
   end
 
   def call
-    if @searchType.empty? || @searchType.include?('jcenter') || @searchType.include?('maven')
+    if @search_type.empty? || @search_type.include?('jcenter') || @search_type.include?('maven')
       begin
         response = @http.request(@request)
       rescue SocketError
@@ -50,7 +50,7 @@ class Alfi::Providers::Bintray < Alfi::Providers::Base
       add_to_list "  # #{'-'*20}Bintray#{'-'*20}" if response_json.size > 0
 
       response_json.group_by { |package| package['repo'] }.each do |provider, repositories|
-        if @searchType.empty? || @searchType.include?(provider)
+        if @search_type.empty? || @search_type.include?(provider)
           add_to_list "  # #{PROVIDERS_TEXTS[provider]}"
           repositories.each do |repo|
             add_repo_to_list "#{repo['system_ids'][0]}:#{repo['latest_version']}" if repo['system_ids'].size > 0

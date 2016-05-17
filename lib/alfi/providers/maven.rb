@@ -4,7 +4,7 @@ class Alfi::Providers::Maven < Alfi::Providers::Base
   end
 
   def call
-    if @searchType.empty? || @searchType.include?('m')
+    if @search_type.empty? || @search_type.include?('m')
       begin
         response = @http.request(@request)
       rescue SocketError

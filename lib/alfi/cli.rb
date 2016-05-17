@@ -10,7 +10,7 @@ class Alfi::Cli
   end
 
   def call(arguments)
-    @searchType = Array.new
+    @searchType = []
     create_options_parser
     search_param = @all_defined_arguments.include?(arguments.first) ? nil : arguments.shift
     @bintray_username = nil

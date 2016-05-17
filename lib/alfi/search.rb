@@ -9,14 +9,14 @@ class Alfi::Search
     exit 1
   end
 
-  def call(search_param, searchType)
+  def call(search_param, search_type)
     return puts 'The search needs 3+ characters'.red if search_param.size < 3
     puts "Searching...\n"
 
-    Alfi::Providers.all.each { |cc| cc.new(search_param, searchType).call }
+    Alfi::Providers.all.each { |cc| cc.new(search_param, search_type).call }
 
     exit_with('No results'.red) if $result_list.empty? && $suggestions.empty?
-    num_results = total_results()
+    num_results = total_results_count()
 
     if num_results > 0
       puts "\ndependencies {\n"
@@ -30,7 +30,7 @@ class Alfi::Search
     puts "Did you mean: #{$suggestions.join(', ').yellow}"
   end
 
-  def total_results()
+  def total_results_count()
     return $result_list.count { |r| r.strip[0] != '#' }
   end
 end
