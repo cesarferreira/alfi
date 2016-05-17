@@ -6,6 +6,12 @@ describe Alfi do
     expect(str).to eq 'http://search.maven.org/solrsearch/select?q=picasso&rows=350&wt=json'
   end
 
+  it 'Test search with repository' do
+    maven = Alfi::Search.new
+    maven.call('sPref', Array.new(1, "maven"))
+    expect(maven.total_results).to be >= 1
+  end
+
   context 'suggestions' do
     it 'should return 0 suggestions' do
       VCR.use_cassette('search_active_android_with_no_suggestions') do

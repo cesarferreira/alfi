@@ -16,7 +16,7 @@ class Alfi::Search
     Alfi::Providers.all.each { |cc| cc.new(search_param, searchType).call }
 
     exit_with('No results'.red) if $result_list.empty? && $suggestions.empty?
-    num_results = $result_list.count { |r| r.strip[0] != '#' }
+    num_results = total_results()
 
     if num_results > 0
       puts "\ndependencies {\n"
@@ -28,5 +28,9 @@ class Alfi::Search
 
     return if $suggestions.empty?
     puts "Did you mean: #{$suggestions.join(', ').yellow}"
+  end
+
+  def total_results()
+    return $result_list.count { |r| r.strip[0] != '#' }
   end
 end
