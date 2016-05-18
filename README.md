@@ -17,6 +17,21 @@ alfi picasso
 <img src="https://raw.github.com/cesarferreira/alfi/master/extras/images/terminal01.gif" />
 </p>
 
+
+Search for `something` by repository
+
+```bash
+alfi picasso -r m
+```
+
+This will search picasso only on maven, you can also define multiple repositories like:
+
+```bash
+alfi picasso -r mc -r jc
+```
+
+This will search picasso on mavenCentral and jCenter
+
 **Final step:** Copy the library you want to your `build.gradle` and sync it
 
 ## Installation
