@@ -10,7 +10,7 @@ class Alfi::Cli
   end
 
   def call(arguments)
-    @searchType = []
+    @search_type = []
     create_options_parser
     search_param = @all_defined_arguments.include?(arguments.first) ? nil : arguments.shift
     @bintray_username = nil
@@ -21,7 +21,7 @@ class Alfi::Cli
 
     exit_with("Missing query parameter\n".red + @opt_parser.help) unless search_param
 
-    Alfi::Search.new.call(search_param, @searchType)
+    Alfi::Search.new.call(search_param, @search_type)
   end
 
   def create_options_parser
@@ -56,22 +56,22 @@ class Alfi::Cli
         puts Alfi::VERSION
         exit
       end
-      opts.on('-r REPOSITORY_NAME', '--repository REPOSITORY_NAME', 'If should search on m (maven), jc (jCenter) or mc (mavenCentral) ') do |repository_name|
-        if repository_name != "m" && repository_name != "jc" && repository_name != "mc"
-          puts "Please choose one of the following m, jc or mc"
+      opts.on('-r REPOSITORY_NAME', '--repository REPOSITORY_NAME', 'If should search on maven, jCenter or mavenCentral ') do |repository_name|
+        if repository_name != "maven" && repository_name != "jcenter" && repository_name != "mavencentral"
+          puts "Please choose one of the following maven, jcenter or mavencentral"
           exit
         end
 
-        if repository_name == "m"
-          @searchType << "m"
+        if repository_name.downcase == "maven"
+          @search_type << "m"
         end
 
-        if repository_name == "mc"
-          @searchType << "maven"
+        if repository_name.downcase == "mavencentral"
+          @search_type << "maven"
         end
 
-        if repository_name == "jc"
-          @searchType << "jcenter"
+        if repository_name.downcase == "jcenter"
+          @search_type << "jcenter"
         end
       end
 
