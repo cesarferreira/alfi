@@ -21,13 +21,13 @@ alfi picasso
 Search for `something` by repository
 
 ```bash
-alfi picasso -r m
+alfi picasso --repository maven
 ```
 
 This will search picasso only on maven, you can also define multiple repositories like:
 
 ```bash
-alfi picasso -r mc -r jc
+alfi picasso -r mavenCentral -r jCenter
 ```
 
 This will search picasso on mavenCentral and jCenter
