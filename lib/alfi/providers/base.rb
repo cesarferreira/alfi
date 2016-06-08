@@ -1,9 +1,10 @@
 class Alfi::Providers::Base
-  def initialize(query)
+  def initialize(query, search_type)
     @query = query
     @uri = URI.parse(query_url(query))
     @http = Net::HTTP.new(@uri.host, @uri.port)
     @request = Net::HTTP::Get.new(@uri.request_uri)
+    @search_type = search_type
     request_extensions if self.class.method_defined?(:request_extensions)
   end
 
