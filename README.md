@@ -27,7 +27,7 @@ alfi picasso --repository maven
 This will search picasso only on maven, you can also define multiple repositories like:
 
 ```bash
-alfi picasso -r mavenCentral -r jCenter
+alfi picasso -r mavencentral -r jcenter
 ```
 
 This will search picasso on mavenCentral and jCenter
