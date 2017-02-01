@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3bb069aaf971480abe5cd8242fafb191)](https://www.codacy.com/app/cesarferreira/alfi?utm_source=github.com&utm_medium=referral&utm_content=cesarferreira/alfi&utm_campaign=badger)
 # alfi [![Build Status](https://travis-ci.org/cesarferreira/alfi.svg?branch=master)](https://travis-ci.org/cesarferreira/alfi) [![Gem Version](http://img.shields.io/gem/v/alfi.svg?style=flat)](http://badge.fury.io/rb/alfi) [![Dependency Status](https://gemnasium.com/cesarferreira/alfi.svg)](https://gemnasium.com/cesarferreira/alfi)
 
 
