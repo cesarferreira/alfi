@@ -25,6 +25,6 @@ class Alfi::Providers::Base
   end
 
   def add_repo_to_list(package)
-    $result_list << "  compile '#{package}'".green
+    $result_list << "  implementation '#{package}'".green
   end
 end
