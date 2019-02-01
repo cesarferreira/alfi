@@ -23,14 +23,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.required_ruby_version = '>= 2.0.0'
+  spec.required_ruby_version = '>= 2.5.0'
 
-  spec.add_development_dependency 'rake', '~> 12.0'
-  spec.add_development_dependency 'webmock', '~> 1.21'
-  spec.add_development_dependency 'rspec', '~> 3.2'
-  spec.add_development_dependency 'vcr', '~> 2.9'
-  spec.add_development_dependency 'pry', '~> 0.10.1'
+  spec.add_development_dependency 'rake', '>= 12.0'
+  spec.add_development_dependency 'webmock', '>= 1.21'
+  spec.add_development_dependency 'rspec', '>= 3.2'
+  spec.add_development_dependency 'vcr', '>= 2.9'
+  spec.add_development_dependency 'pry', '>= 0.10.1'
   spec.add_dependency 'bundler',  '~> 1.7'
-  spec.add_dependency 'json',  '~> 2.0.2'
-  spec.add_dependency 'colorize',  '~> 0.7'
+  spec.add_dependency 'json',  '>= 2.1.0'
+  spec.add_dependency 'colorize',  '>= 0.7'
 end
